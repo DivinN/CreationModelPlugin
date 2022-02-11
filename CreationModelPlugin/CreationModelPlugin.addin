@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>C:\Guild of Magic\RevitAPITraining\CreationModelPlugin.dll</Assembly>
+		<AddInId>987151E6-F4B5-4D5C-A5B2-09BD59FD9102</AddInId>
+		<FullClassName>CreationModelPlugin.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Приложение для Revit</Text>
+	</AddIn>
+</RevitAddIns>
