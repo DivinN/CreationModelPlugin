@@ -16,8 +16,20 @@ namespace CreationModelPlugin
         {
             Document doc = commandData.Application.ActiveUIDocument.Document;
 
+            Transaction transaction = new Transaction(doc, "Построение стен");
+            transaction.Start();
+
             // Создание стен по прямоугольнику
             List<Wall> newWalls = WallsHelper.CreateWallsAlongRectangle(doc, "Уровень 1", "Уровень 2", 10000, 5000);
+
+            FamilyInstance door = DoorHelper.CreateDoorInMiddle(doc, "Уровень 1", newWalls[0]);
+            FamilyInstance window_0 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[1], 900);
+            FamilyInstance window_1 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[2], 900);
+            FamilyInstance window_2 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[3], 900);
+            
+            
+            transaction.Commit();
+
 
             return Result.Succeeded;
         }

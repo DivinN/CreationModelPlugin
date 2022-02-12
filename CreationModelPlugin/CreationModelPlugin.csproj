@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreationModel.cs" />
+    <Compile Include="DoorHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WallsHelper.cs" />
+    <Compile Include="WindowHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CreationModelPlugin.addin" />

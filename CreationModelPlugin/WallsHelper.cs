@@ -57,8 +57,6 @@ namespace CreationModelPlugin
             points.Add(new XYZ(-dx, dy, 0));
             points.Add(new XYZ(-dx, -dy, 0));
 
-            Transaction transaction = new Transaction(doc, "Построение стен");
-            transaction.Start();
             for (int i = 0; i < 4; i++)
             {
                 Line line = Line.CreateBound(points[i], points[i + 1]);
@@ -66,8 +64,6 @@ namespace CreationModelPlugin
                 walls.Add(wall);
                 wall.get_Parameter(BuiltInParameter.WALL_HEIGHT_TYPE).Set(level2.Id);
             }
-
-            transaction.Commit();
 
             return walls;
         }
