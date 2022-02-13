@@ -26,8 +26,9 @@ namespace CreationModelPlugin
             FamilyInstance window_0 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[1], 900);
             FamilyInstance window_1 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[2], 900);
             FamilyInstance window_2 = WindowHelper.CreateWindowInMiddle(doc, "Уровень 1", newWalls[3], 900);
-            
-            
+
+            ExtrusionRoof roof = RoofHelper.CreateRoof(doc, "Уровень 2", newWalls[0], newWalls[1], 1000);
+
             transaction.Commit();
 
 
